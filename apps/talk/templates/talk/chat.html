@@ -1,0 +1,17 @@
+{% extends "talk/base.html" %}
+{% block title %}로그인{% endblock %}
+{% block content %}
+<div class="pro">
+    <img src="{{ url_for('talk.static', filename='mail.png') }}" width="50" height="50">
+    <div class="profile">
+        <p>강건마</p>
+        <p>2</p>
+    </div>
+  </div>
+<div class="middle">
+</div>
+<div class="fixed-textarea-container">
+    <textarea class="fixed-textarea"></textarea>
+    <button class="submit-button">제출</button>
+</div>
+{% endblock %}

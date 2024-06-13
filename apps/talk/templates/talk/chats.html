@@ -1,0 +1,54 @@
+{% extends "talk/base.html" %}
+{% block title %}채팅방{% endblock %}
+{% block content %}
+<body class="container">
+    <div class="list">
+      <div class="ui secondary vertical pointing menu">
+        <a class="item active" href="{{url_for('talk.index')}}">
+            Home
+          </a>
+          <a class="item">
+            Messages
+          </a>
+          <a class="item active" href="{{url_for('talk.friends')}}">
+            Friends
+          </a>
+      </div>
+    </div>
+    <div class="friends">
+      <h2>채팅</h2>
+      <div class="ui inverted segment" style="background-color: #333; color: #FFF;">
+        <div class="ui inverted relaxed divided list">
+          <div class="item"onclick="window.location.href = '{{ url_for('talk.chat') }}';" style="cursor: pointer;">
+            <div class="content">
+              <div class="header">채팅방1</div>
+              미리보는 메세지
+            </div>
+          </div>
+          <div class="item"onclick="window.location.href = '{{ url_for('talk.chat') }}';" style="cursor: pointer;">
+            <div class="content">
+              <div class="header">채팅방2</div>
+              미리미리메세지
+            </div>
+          </div>
+          <div class="item"onclick="window.location.href = '{{ url_for('talk.chat') }}';" style="cursor: pointer;">
+            <div class="content">
+              <div class="header">채팅방3</div>
+              미리미리미리메세지
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+    </div>
+  </body>
+<script>
+    $( function() {
+    $( "#menu" ).menu({
+      items: "> :not(.ui-widget-header)"
+    });
+  } );
+</script>
+</body>
+
+{% endblock %}

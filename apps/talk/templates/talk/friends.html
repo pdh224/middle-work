@@ -1,0 +1,73 @@
+{% extends "talk/base.html" %}
+{% block title %}친구목록{% endblock %}
+{% block content %}
+<body class="container">
+    <div class="list">
+      <div class="ui secondary vertical pointing menu">
+          <a class="item active" href="{{url_for('talk.index')}}">
+            Home
+          </a>
+          <a class="item active" href="{{url_for('talk.chats')}}">
+            Messages
+          </a>
+          <a class="item">
+            Friends
+          </a>
+      </div>
+    </div>
+    <div class="friends">
+      <h2>친구</h2>
+      <div class="pro">
+        <img src="{{ url_for('talk.static', filename='mail.png') }}" width="50" height="50">
+        <div class="profile">
+            <p>유노코딩</p>
+            <p>코딩을 배워보아요</p>
+        </div>
+      </div>
+      <hr>
+      <p>친구8</p>
+      <div class="ui vertical menu" style="width: 500px;" >
+          <a class="item" >
+              친구1
+              <div class="ui label">51</div>
+          </a>
+          <a class="item">
+                친구2
+            <div class="ui label">2</div>
+          </a>
+          <a class="item">
+              친구3
+              <div class="ui label">13</div>
+            </a>
+            <a class="item">
+                친구4
+                <div class="ui label">2</div>
+            </a>
+            <a class="item">
+                친구5
+                <div class="ui label">1</div>
+            </a>
+            <a class="item">
+                친구6
+                <div class="ui label">3</div>
+            </a>
+            <a class="item">
+                친구7
+                <div class="ui label">4</div>
+            </a>
+            <a class="item">
+                친구8
+                <div class="ui label">1</div>
+            </a>
+        </div>
+    </div>
+  </body>
+<script>
+    $( function() {
+    $( "#menu" ).menu({
+      items: "> :not(.ui-widget-header)"
+    });
+  } );
+</script>
+</body>
+{% endblock %}

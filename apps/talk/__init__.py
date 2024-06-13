@@ -1,0 +1,1 @@
+import apps.talk.models
